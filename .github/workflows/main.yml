@@ -7,9 +7,9 @@ jobs:
     steps:
       - name: Pandoc action step
         id: hello
-        uses: actions/action@v1
+        uses: actions/handbook@v1
         with:
-          markdown: 'README.md'
+          markdown: "README.md"
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
