@@ -1,0 +1,15 @@
+on: [push]
+
+jobs:
+  pandoc_job:
+    runs-on: ubuntu-latest
+    name: A job create the handbook
+    steps:
+      - name: Pandoc action step
+        id: hello
+        uses: action@v1
+        with:
+          markdown: 'README.md'
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
