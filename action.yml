@@ -1,5 +1,5 @@
 # action.yml
-name: "Handbook"
+name: "handbook"
 description: "Create the handbook with pandoc"
 inputs:
   markdown: # id of input
