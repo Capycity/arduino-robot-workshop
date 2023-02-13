@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Pandoc action step
         id: hello
-        uses: arduino-robot-workshop/action@v0.1
+        uses: Capycity/arduino-robot-workshop@v0.1
         with:
           markdown: "README.md"
       # Use the output from the `hello` step
