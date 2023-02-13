@@ -1,0 +1,16 @@
+# action.yml
+name: "Handbook"
+description: "Create the handbook with pandoc"
+inputs:
+  markdown: # id of input
+    description: "markdown file"
+    required: true
+    default: "README.md"
+outputs:
+  time: # id of output
+    description: "The time of handbook creation"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.markdown }}
