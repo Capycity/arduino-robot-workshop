@@ -5,16 +5,17 @@ jobs:
     runs-on: ubuntu-latest
     name: A job create the handbook
     steps:
+      - run: "mkdir /data"
       - name: Pandoc action step
         id: hello
         uses: Capycity/arduino-robot-workshop@main
         with:
-          markdown: "README.md"
+          markdown: "--volume /data:/data"
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: README.pdf
-          path: ./data/README.pdf
+          path: /data/README.pdf
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
