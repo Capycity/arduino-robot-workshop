@@ -9,11 +9,12 @@ jobs:
         id: hello
         uses: Capycity/arduino-robot-workshop@main
       - run: "ls -la"
+      - run: "pandoc --help"
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: README.pdf
-          path: /data
+          path: /
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
