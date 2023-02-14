@@ -10,6 +10,12 @@ jobs:
         uses: Capycity/arduino-robot-workshop@main
         with:
           markdown: "README.md"
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: README.pdf
+          path: /README.pdf
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: my-artifact
