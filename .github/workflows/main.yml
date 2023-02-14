@@ -14,7 +14,6 @@ jobs:
         # with:
         #   markdown: "--volume abc:/data"
       - run: "ls -la abc"
-      - run: "pandoc --help"
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
