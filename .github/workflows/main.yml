@@ -11,15 +11,15 @@ jobs:
       - name: Pandoc action step
         id: hello
         uses: Capycity/arduino-robot-workshop@main
-        with:
-          markdown: "--volume abc:/data"
+        # with:
+        #   markdown: "--volume abc:/data"
       - run: "ls -la abc"
       - run: "pandoc --help"
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: README.pdf
-          path: /
+          path: ./README.pdf
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
