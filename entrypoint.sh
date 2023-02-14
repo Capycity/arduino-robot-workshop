@@ -1,3 +1,3 @@
 #!/bin/sh -l
-ls -la
+ls -la root
 pandoc ./README.md --template=eisvogel -o README.pdf
