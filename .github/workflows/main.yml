@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: A job create the handbook
     steps:
+      - run: "mkdir abc"
+      - run: "ls -la"
       - name: Pandoc action step
         id: hello
         uses: Capycity/arduino-robot-workshop@main
