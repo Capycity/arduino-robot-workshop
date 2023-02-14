@@ -14,7 +14,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: README.pdf
-          path: /data/README.pdf
+          path: ./data/README.pdf
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
