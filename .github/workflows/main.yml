@@ -5,14 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     name: A job create the handbook
     steps:
+      - run: "echo $(pwd)"
       - run: "mkdir abc"
       - run: "ls -la"
       - name: Pandoc action step
         id: hello
         uses: Capycity/arduino-robot-workshop@main
         with:
-          markdown: "--volume /abc:/data"
-      - run: "ls -la /abc"
+          markdown: "--volume abc:/data"
+      - run: "ls -la abc"
       - run: "pandoc --help"
       - name: Upload artifact
         uses: actions/upload-artifact@v3
